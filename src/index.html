@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <nav>
+      <h2 class="logo">Menu</h2>
+      <ul class="menu-itens">
+        <li>Comece a codificar</li>
+        <li>Sobre</li>
+        <li>Para que serve?</li>
+
+      </ul>
+    </nav>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Cifra de César</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">
-      <h1>Hello world!</h1>
+      <h1>Cifra de César</h1>
+    </div>
+    <div>
+      <h2>A Cifra de César é uma simples técnica de Criptografia, que
+        pode ser utilizada na criação de senhas, códigos e mensagens.  </h2>
+    </div>
+    <div>
+      <p1>Crie seu código utilizando o sistema abaixo:</p1>
+   
+    </div>
+    <div>  <form>
+      <input type="text" name="codificar" placeholder="insira aqui o seu texto" required>
+      <div><button type="codificar">Codificar</button>
+      <button type="decodificar">Decodificar</button>
+    </div>
+      
+        <input type="text" name="decodificar">
+        </form>
+      </div>
+      <form action="#">
+        <label for="desloc">Chave de deslocamento:</label>
+        <select name="deslocamento" id="desloc">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </form>
+      
+      </div>
     </div>
     <script src="index.js" type="module"></script>
   </body>
