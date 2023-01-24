@@ -1,6 +1,10 @@
 #navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
     overflow: hidden; /*para evitar scroll horizontal desnecessario*/
-    background-color: rgb(226, 75, 120);
+    background-color: rgb(224, 121, 152);
     padding: 0px 0px; /*para gerar espaço entre os conteudos*/
     transition: none;
     position: static;
@@ -22,14 +26,26 @@
     border-radius: 4px;
 }
 
-#navbar a.active {
-    background-color: dodgerblue;
+
+
+
+#navbar a:hover {
+    background-color: rgb(223, 161, 220);
     color: white;
 }
 
-#navbar-right {
-    float: right;
+#navbar a:active {
+    background-color: rgb(231, 103, 156);
+    color: white;
 }
+
+
+#navbar-right {
+   
+    margin: 0 auto;
+    
+}
+
 
 @media screen and (max-width: 580px) {
     #navbar {
@@ -50,3 +66,29 @@
 background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
  }
+
+
+ body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background-color: rgb(240, 232, 196);
+    text-align: center;
+
+ }
+
+ h1 {
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-size: 72px;
+ }
+
+#imagem {
+
+    height: 5px;
+}
+
+#imagem {
+    align-content: center;
+    width="200px"
+    height="100 px"
+}
