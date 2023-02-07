@@ -1,15 +1,31 @@
 import cipher from './cipher.js';
 
-console.log(cipher);
+const btnCifrar = document.querySelector("#btnCodificar")
+btnCifrar.addEventListener("click",cifrar);
 
-function scrollFunction(){
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("navbar").style.padding = "30px 10px";
-        document.getElementById("logo").style.fontSize = "25px";
+function cifrar() {
+     console.log("cifrar");
+    const mensagemCifra = document.querySelector("#codifica").value;
+const offset = document.querySelector("#desloc").value;
+let mensagem = cipher.encode(mensagemCifra, parseInt(offset));
+document.querySelector("#mensagemCodificada").innerText = mensagem;
+//querySelector busca/seleciona o conteudo do id ou class, neste caso, o codifica
+//colocando "#" você busca pelo ID 
+}
 
-    } else {
-        document.getElementById("navbar").style.padding = "80px 10px"
-        document.getElementById("logo").style.fontSize = "35px"
-     }
+const botaoCifrar = () => {
+    document.querySelector("#btnCodificar");
+botaoCifrar.addEventListener("click",function(event) {
+event.preventDefault();
+})
+}
+
+function decifrar() {
+    console.log("decifrar");
+    const mensagemDecifra = document.querySelector("#decodifica").value;
+const offset = document.querySelector("#desloc").value;
+let mensagem = cipher.encode(mensagemDecifra, parseInt(offset));
+document.querySelector("#mensagemCodificada").innerText = mensagem;
+//querySelector busca/seleciona o conteudo do id ou class, neste caso, o codifica
 }
 
