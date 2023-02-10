@@ -1,31 +1,32 @@
 import cipher from './cipher.js';
 
-const btnCifrar = document.querySelector("#btnCodificar")
+const btnCifrar = document.getElementById("btnCodificar");
 btnCifrar.addEventListener("click",cifrar);
 
-function cifrar() {
-     console.log("cifrar");
+function cifrar(event) {
+    event.preventDefault()
+
     const mensagemCifra = document.querySelector("#codifica").value;
 const offset = document.querySelector("#desloc").value;
-let mensagem = cipher.encode(mensagemCifra, parseInt(offset));
-document.querySelector("#mensagemCodificada").innerText = mensagem;
+let mensagem = cipher.encode(parseInt(offset), mensagemCifra);
+document.querySelector("#mensagemCodificada").innerHTML = mensagem;
 //querySelector busca/seleciona o conteudo do id ou class, neste caso, o codifica
 //colocando "#" você busca pelo ID 
 }
 
-const botaoCifrar = () => {
-    document.querySelector("#btnCodificar");
-botaoCifrar.addEventListener("click",function(event) {
-event.preventDefault();
-})
-}
+const btnDecifrar = document.getElementById("btnDecodificar");
+btnDecifrar.addEventListener("click",decifrar);
 
-function decifrar() {
-    console.log("decifrar");
-    const mensagemDecifra = document.querySelector("#decodifica").value;
+function decifrar(event) {
+    event.preventDefault()
+    const mensagemDecifra = document.querySelector("#codifica").value;
 const offset = document.querySelector("#desloc").value;
-let mensagem = cipher.encode(mensagemDecifra, parseInt(offset));
-document.querySelector("#mensagemCodificada").innerText = mensagem;
+let mensagem = cipher.decode(parseInt(offset), mensagemDecifra);
+console.log("mensagem", mensagem)
+document.querySelector("#mensagemCodificada").innerHTML = mensagem;
 //querySelector busca/seleciona o conteudo do id ou class, neste caso, o codifica
 }
+
+
+
 
